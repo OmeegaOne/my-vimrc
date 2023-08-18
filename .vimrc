@@ -71,6 +71,9 @@ nnoremap <leader>w mq:match Error /\v\s+$/<cr> /\v\s+$<cr>`q
 nnoremap <leader>wc mq:%s/\v\s+$/<cr>`q
 nnoremap <leader>mn :match none<cr> :nohlsearch<cr>
 nnoremap <leader>sn :nohlsearch<cr>
+nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 15<cr>
+nnoremap <leader>cn :cnext<cr>
+nnoremap <leader>cp :cprevious<cr>
 nnoremap H 0
 nnoremap L $
 nnoremap / /\v
